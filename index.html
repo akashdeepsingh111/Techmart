@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMart - Your One-Stop E-Commerce Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>TechMart</h1>
+                </div>
+
+                <nav class="nav">
+                    <div class="nav-icons">
+                        <div class="search-icon" id="searchIcon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                        <div class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="close-menu" id="closeMenu">×</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar (slim, appears just below header) -->
+    <div class="search-container" id="searchContainer">
+        <div class="search-bar-wrapper">
+            <i class="fas fa-search search-icon-inside"></i>
+            <input type="text" placeholder="Search products..." class="search-input" id="searchInput">
+            <button class="close-search" id="closeSearch">×</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="closeCart">×</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <p>Total: $<span id="cartTotal">0</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero / Company Introduction -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to TechMart</h1>
+                <p>Discover the latest in technology with our curated selection of gadgets, electronics, and more. Shop smart, live better.</p>
+                <button class="cta-btn">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Slider (no prev/next buttons) -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="slider" id="productSlider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?w=800" alt="iPhone 15">
+                        <h3>iPhone 15</h3>
+                        <p>$999</p>
+                        <button class="add-to-cart-btn" data-id="1" data-name="iPhone 15" data-price="999">Add to Cart</button>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800" alt="MacBook Pro">
+                        <h3>MacBook Pro</h3>
+                        <p>$1999</p>
+                        <button class="add-to-cart-btn" data-id="2" data-name="MacBook Pro" data-price="1999">Add to Cart</button>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800" alt="AirPods Pro">
+                        <h3>AirPods Pro</h3>
+                        <p>$249</p>
+                        <button class="add-to-cart-btn" data-id="3" data-name="AirPods Pro" data-price="249">Add to Cart</button>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800" alt="Smart Watch">
+                        <h3>Smart Watch</h3>
+                        <p>$299</p>
+                        <button class="add-to-cart-btn" data-id="4" data-name="Smart Watch" data-price="299">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Indicators are added dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products by Categories -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3>Electronics</h3>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="Laptop">
+                            <h4>High-End Laptop</h4>
+                            <p>$1299</p>
+                            <button class="add-to-cart-btn" data-id="5" data-name="High-End Laptop" data-price="1299">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600" alt="Tablet">
+                            <h4>Pro Tablet</h4>
+                            <p>$599</p>
+                            <button class="add-to-cart-btn" data-id="6" data-name="Pro Tablet" data-price="599">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Accessories</h3>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Headphones">
+                            <h4>Wireless Headphones</h4>
+                            <p>$199</p>
+                            <button class="add-to-cart-btn" data-id="7" data-name="Wireless Headphones" data-price="199">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600" alt="Charger">
+                            <h4>Fast Charger</h4>
+                            <p>$49</p>
+                            <button class="add-to-cart-btn" data-id="8" data-name="Fast Charger" data-price="49">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Intro -->
+    <section class="founder">
+        <div class="container">
+            <h2>Meet Our Founder</h2>
+            <div class="founder-card">
+                <div class="founder-photo">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Akashdeep">
+                </div>
+                <div class="founder-info">
+                    <h3>Akashdeep Singh</h3>
+                    <p class="title">Founder & CEO</p>
+                    <p>With more than a decade of experience in technology and e-commerce, Akashdeep founded TechMart with a simple vision: make high-quality gadgets accessible to everyone. He believes in building trust through transparency, innovation, and exceptional customer experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on products, deals, and more!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechMart</h3>
+                    <p>Your trusted e-commerce partner for all things tech.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">DMCA</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2022–2026 TechMart. All rights reserved. Made with ❤️ by Akashdeep Singh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
