@@ -117,7 +117,7 @@ body {
 
 .nav-menu .close-menu {
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 25px;
     font-size: 2.5rem;
     cursor: pointer;
@@ -166,7 +166,7 @@ body {
     border-radius: 999px;
     font-size: 1rem;
     transition: all 0.25s;
-    background: transparent;
+    background: #000012;
 }
 
 .search-input:focus {
@@ -232,7 +232,7 @@ body {
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    max-height: 80vh;
+    max-height: 400vh;
     overflow-y: auto;
 }
 
@@ -391,7 +391,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
 }
 
 .indicator {
